@@ -1,0 +1,932 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kamla Hardware | Hardware & Building Material</title>
+
+<meta name="description"
+content="Kamla Hardware - Quality hardware products, faucets, showers, locks, door hardware and sanitary fittings in District Sultanpur.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fa;
+    color:#222;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.10);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:27px;
+    font-weight:800;
+    color:#123c69;
+}
+
+.logo span{
+    color:#f39c12;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    margin-left:25px;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#f39c12;
+}
+
+/* HERO */
+
+.hero{
+    min-height:600px;
+    display:flex;
+    align-items:center;
+    background:
+    linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),
+    url("https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=1600&q=80")
+    center/cover;
+    color:#fff;
+}
+
+.hero-content{
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.hero h1{
+    font-size:58px;
+    line-height:1.15;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#f39c12;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:680px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
+    margin-right:10px;
+}
+
+.btn-primary{
+    background:#f39c12;
+    color:#fff;
+}
+
+.btn-secondary{
+    border:2px solid #fff;
+    color:#fff;
+}
+
+.btn:hover{
+    opacity:.85;
+}
+
+/* COMMON */
+
+section{
+    padding:75px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:38px;
+    color:#123c69;
+}
+
+.section-title p{
+    color:#666;
+    margin-top:8px;
+}
+
+/* PRODUCTS */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.product-card{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-7px);
+}
+
+.product-card img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+}
+
+.product-info{
+    padding:20px;
+}
+
+.product-info h3{
+    color:#123c69;
+    margin-bottom:8px;
+}
+
+.product-info p{
+    color:#666;
+    font-size:14px;
+}
+
+/* ABOUT */
+
+.about{
+    background:#fff;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:15px;
+}
+
+.about h2{
+    color:#123c69;
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.about p{
+    color:#555;
+    margin-bottom:15px;
+}
+
+/* WHY US */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.feature{
+    background:#fff;
+    text-align:center;
+    padding:30px 20px;
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,.06);
+}
+
+.feature .icon{
+    font-size:40px;
+    margin-bottom:12px;
+}
+
+.feature h3{
+    color:#123c69;
+    margin-bottom:8px;
+}
+
+/* CTA */
+
+.cta{
+    background:#123c69;
+    color:#fff;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    margin-bottom:25px;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-box{
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.contact-box h3{
+    color:#123c69;
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+.contact-item{
+    margin-bottom:18px;
+}
+
+.contact-item strong{
+    display:block;
+    color:#123c69;
+    margin-bottom:3px;
+}
+
+form input,
+form textarea{
+    width:100%;
+    padding:13px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    font-size:15px;
+}
+
+form textarea{
+    height:130px;
+    resize:vertical;
+}
+
+form button{
+    width:100%;
+    padding:14px;
+    border:none;
+    background:#25D366;
+    color:#fff;
+    font-size:16px;
+    font-weight:bold;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+form button:hover{
+    opacity:.9;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111827;
+    color:#fff;
+    padding:30px 20px;
+    text-align:center;
+}
+
+footer p{
+    color:#ccc;
+    margin-top:5px;
+}
+
+/* WHATSAPP FLOATING BUTTON */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+    z-index:999;
+}
+
+.whatsapp:hover{
+    transform:scale(1.08);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .products,
+    .features{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:44px;
+    }
+}
+
+@media(max-width:600px){
+
+    .products,
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        min-height:520px;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+KAMLA <span>HARDWARE</span>
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#products">Products</a>
+<a href="#about">About Us</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>
+Quality Hardware.<br>
+<span>Trusted Service.</span>
+</h1>
+
+<p>
+Welcome to Kamla Hardware. We provide quality hardware,
+faucets, showers, locks, door hardware and sanitary fittings
+for homes, offices and commercial projects.
+</p>
+
+<a href="#products" class="btn btn-primary">
+View Products
+</a>
+
+<a href="#contact" class="btn btn-secondary">
+Send Enquiry
+</a>
+
+</div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section id="products">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Our Products</h2>
+
+<p>
+Quality products for every hardware requirement
+</p>
+
+</div>
+
+
+<div class="products">
+
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+
+<h3>Faucets & Showers</h3>
+
+<p>
+Modern faucets, showers and bathroom fittings.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+
+<h3>Door Locks</h3>
+
+<p>
+Reliable locks and security hardware.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1581783898377-1c85bf937427?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+
+<h3>Door Hardware</h3>
+
+<p>
+Handles, hinges and accessories for doors.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=800&q=80">
+
+<div class="product-info">
+
+<h3>Sanitary Fittings</h3>
+
+<p>
+Quality bathroom and sanitary accessories.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div>
+
+<img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=1000&q=80">
+
+</div>
+
+
+<div>
+
+<h2>About Kamla Hardware</h2>
+
+<p>
+Kamla Hardware is committed to providing reliable
+hardware products and quality service to customers.
+</p>
+
+<p>
+We offer a wide range of hardware products suitable
+for residential, commercial and construction projects.
+</p>
+
+<p>
+Our focus is on quality products, competitive pricing
+and customer satisfaction.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY US -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Why Choose Us?</h2>
+
+<p>
+Quality products and reliable service
+</p>
+
+</div>
+
+
+<div class="features">
+
+
+<div class="feature">
+
+<div class="icon">✓</div>
+
+<h3>Quality Products</h3>
+
+<p>
+Reliable and durable hardware products.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="icon">₹</div>
+
+<h3>Best Pricing</h3>
+
+<p>
+Competitive prices for retail and projects.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="icon">⚡</div>
+
+<h3>Fast Service</h3>
+
+<p>
+Quick response for enquiries and orders.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="icon">★</div>
+
+<h3>Customer Support</h3>
+
+<p>
+We help you choose the right product.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+Looking for Hardware Products?
+</h2>
+
+<p>
+Contact Kamla Hardware today for product details,
+catalogue and pricing.
+</p>
+
+<a href="#contact" class="btn btn-primary">
+Get In Touch
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Contact Us</h2>
+
+<p>
+Send us your requirement
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<!-- CONTACT DETAILS -->
+
+<div class="contact-box">
+
+<h3>Kamla Hardware</h3>
+
+
+<div class="contact-item">
+
+<strong>📞 Phone / WhatsApp</strong>
+
+<span>
++91 87458 89076
+</span>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>📍 Address</strong>
+
+<span>
+District Sultanpur,<br>
+Uttar Pradesh, India
+</span>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>🕐 Business Hours</strong>
+
+<span>
+Monday - Saturday: 9:00 AM - 7:00 PM
+</span>
+
+</div>
+
+
+<br>
+
+
+<a
+href="https://wa.me/918745889076"
+target="_blank"
+class="btn btn-primary">
+
+💬 WhatsApp Us
+
+</a>
+
+
+</div>
+
+
+<!-- ENQUIRY FORM -->
+
+<div class="contact-box">
+
+<h3>Send Enquiry</h3>
+
+
+<form onsubmit="sendWhatsApp(); return false;">
+
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required>
+
+
+<input
+type="tel"
+id="phone"
+placeholder="Mobile Number"
+required>
+
+
+<input
+type="text"
+id="product"
+placeholder="Product Required">
+
+
+<textarea
+id="message"
+placeholder="Your Requirement">
+</textarea>
+
+
+<button type="submit">
+
+💬 Send Enquiry on WhatsApp
+
+</button>
+
+
+</form>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>
+Kamla Hardware
+</h3>
+
+<p>
+Quality Hardware • Trusted Service
+</p>
+
+<p>
+© 2026 Kamla Hardware. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+class="whatsapp"
+href="https://wa.me/918745889076"
+target="_blank"
+title="Chat on WhatsApp">
+
+💬
+
+</a>
+
+
+<!-- WHATSAPP SCRIPT -->
+
+<script>
+
+function sendWhatsApp(){
+
+const name =
+document.getElementById("name").value;
+
+const phone =
+document.getElementById("phone").value;
+
+const product =
+document.getElementById("product").value;
+
+const message =
+document.getElementById("message").value;
+
+
+const whatsappNumber =
+"918745889076";
+
+
+const text =
+"Hello Kamla Hardware,%0A%0A" +
+
+"Name: " +
+encodeURIComponent(name) +
+"%0A" +
+
+"Mobile: " +
+encodeURIComponent(phone) +
+"%0A" +
+
+"Product: " +
+encodeURIComponent(product) +
+"%0A" +
+
+"Requirement: " +
+encodeURIComponent(message);
+
+
+window.open(
+"https://wa.me/" +
+whatsappNumber +
+"?text=" +
+text,
+"_blank"
+);
+
+}
+
+</script>
+
+</body>
+</html>
+```
